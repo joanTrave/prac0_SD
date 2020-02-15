@@ -13,6 +13,15 @@ public class ComUtils {
         dataOutputStream = new DataOutputStream(outputStream);
     }
 
+    public char read_char() throws IOException {
+        byte bytes[] = read_bytes(1);
+        return (char) bytes[0];
+    }
+
+    public void write_char(char character) throws IOException {
+        this.write_string(String.valueOf(character));
+    }
+
     public int read_int32() throws IOException {
         byte bytes[] = read_bytes(4);
 
