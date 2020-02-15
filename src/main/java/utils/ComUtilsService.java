@@ -12,15 +12,22 @@ public class ComUtilsService {
     }
 
     public void writeTest() {
-        //TODO: put your code here
+        char c = 'a';
+        try {
+            this.comUtils.write_char(c);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public String readTest() {
         String result = "";
-        //TODO: put your code here
+        try {
+            result = ((Character) this.comUtils.read_char()).toString();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return result;
     }
-
-
 
 }
